@@ -1,7 +1,21 @@
 {
-    "name": "deerlion-theme",
-    "version": "0.0.1",
-    "engines": {
-        "ghost": ">=0.9.0 <1.0.0"
-    }
+  "name": "deerlion-theme",
+  "version": "0.0.1",
+  "engines": {
+    "ghost": ">=0.9.0 <1.0.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.3.1"
+  }
 }
