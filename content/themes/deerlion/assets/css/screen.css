@@ -529,6 +529,7 @@ body.nav-opened .site-wrapper {
 }
 
 /* Navigation */
+/*
 body.nav-opened .nav-cover {
     position: fixed;
     top: 0;
@@ -685,6 +686,7 @@ body.nav-opened .nav {
 .nav a:focus {
     color: #fff;
 }
+*/
 
 .subscribe-button {
     -webkit-box-sizing: border-box;

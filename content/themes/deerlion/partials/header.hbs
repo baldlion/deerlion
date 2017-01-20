@@ -1,8 +1,12 @@
-<header class="header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+<header class="header">
 
-  <div class="header__brand" itemscope itemtype="http://schema.org/Attorney">
+  <div class="header__content">
+    <div class="header__brand" itemscope itemtype="http://schema.org/Attorney">
     <a itemprop="url" href="{{@blog.url}}" title="{{@blog.title}}">
-      <img itemprop="logo" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+    <img itemprop="logo" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+    </div>
+
+    {{navigation}}
   </div>
 
 </header>

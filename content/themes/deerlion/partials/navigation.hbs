@@ -1,3 +1,14 @@
+<nav class="nav">
+  <ul class="nav__list">
+    {{#foreach navigation}}
+      <li id="nav-{{slug}}" class="nav__list-item {{#if current}} nav__list-item--current{{/if}}" role="presentation">
+        <a href="{{url absolute="true"}}">{{label}}</a>
+      </li>
+    {{/foreach}}
+  </ul>
+</nav>
+
+<!--
 <div class="nav">
     <h3 class="nav-title">Menu</h3>
     <a href="#" class="nav-close">
@@ -15,3 +26,4 @@
     {{/if}}
 </div>
 <span class="nav-cover"></span>
+-->

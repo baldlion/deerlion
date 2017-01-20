@@ -1,2 +1,19 @@
+@import "variables";
+@import "mixins";
 @import "normalize";
+@import "defaults";
+@import "buttons";
+@import "cover";
 @import "header";
+@import "nav";
+@import "content";
+@import "loop";
+@import "footer";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(246, 244, 243);
+}
