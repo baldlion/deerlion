@@ -1,0 +1,37 @@
+<article class="{{post_class}} loop__post">
+  <div class="loop__post--cover" data-lazy-load="{{image}}">
+
+  </div>
+  <div class="loop__post--body">
+    <header class="loop__post--header">
+      <h2 class="loop__post--title">
+        <a href="{{url}}">{{title}}</a>
+      </h2>
+    </header>
+
+    {{#if html.length}}
+      <section class="loop__post--excerpt">
+        <p>
+          {{excerpt words="42"}}
+        </p>
+      </section>
+    {{/if}}
+
+    <footer class="loop__post--meta">
+      <time class="loop__post--date" datetime="{{date format="MM-DD-YYYY"}}">
+        {{date format="MMMM DD, YYYY"}}
+      </time>
+
+      <div class="loop__post--author">
+        by {{author.name}}
+      </div>
+
+      <div class="loop__post--tags">
+        <label>Tags:</label>
+        {{#each tags}}
+          <a href="/tag/{{slug}}">{{name}}</a>
+        {{/each}}
+      </div>
+    </footer>
+  </div>
+</article>

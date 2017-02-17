@@ -1,38 +1,41 @@
 // Ghost Configuration for Heroku
 
+require('dotenv').config();
+
 var path = require('path'),
-    config,
-    fileStorage,
-    storage;
+  config,
+  fileStorage,
+  storage;
 
 if (!!process.env.S3_ACCESS_KEY_ID) {
-  fileStorage = true
+  fileStorage = true;
   storage = {
     active: 'ghost-s3',
     'ghost-s3': {
-      accessKeyId:     process.env.S3_ACCESS_KEY_ID,
+      accessKeyId: process.env.S3_ACCESS_KEY_ID,
       secretAccessKey: process.env.S3_ACCESS_SECRET_KEY,
-      bucket:          process.env.S3_BUCKET_NAME,
-      region:          process.env.S3_BUCKET_REGION,
-      assetHost:       process.env.S3_ASSET_HOST_URL
+      bucket: process.env.S3_BUCKET_NAME,
+      region: process.env.S3_BUCKET_REGION,
+      assetHost: process.env.S3_ASSET_HOST_URL
     }
-  }
+  };
 } else if (!!process.env.BUCKETEER_AWS_ACCESS_KEY_ID) {
-  fileStorage = true
+  fileStorage = true;
   storage = {
     active: 'ghost-s3',
     'ghost-s3': {
-      accessKeyId:     process.env.BUCKETEER_AWS_ACCESS_KEY_ID,
+      accessKeyId: process.env.BUCKETEER_AWS_ACCESS_KEY_ID,
       secretAccessKey: process.env.BUCKETEER_AWS_SECRET_ACCESS_KEY,
-      bucket:          process.env.BUCKETEER_BUCKET_NAME,
-      region:          process.env.S3_BUCKET_REGION,
-      assetHost:       process.env.S3_ASSET_HOST_URL
+      bucket: process.env.BUCKETEER_BUCKET_NAME,
+      region: process.env.S3_BUCKET_REGION,
+      assetHost: process.env.S3_ASSET_HOST_URL
     }
-  }
+  };
 } else {
-  fileStorage = false
-  storage = {}
+  fileStorage = false;
+  storage = {};
 }
+
 
 config = {
 
@@ -76,7 +79,7 @@ config = {
       debug: false
     },
     server: {
-      host: '127.0.0.1',
+      host: ['127.0.0.1', '192.168.1.5'],
       port: '2368'
     },
     paths: {

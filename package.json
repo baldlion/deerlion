@@ -8,9 +8,9 @@
   },
   "bugs": "https://github.com/TryGhost/Ghost/issues",
   "private": true,
-  "version": "0.11.3",
+  "version": "0.11.4",
   "dependencies": {
-    "ghost": "0.11.3",
+    "ghost": "0.11.4",
     "ghost-s3-storage-adapter": "3.0.4",
     "pg": "latest"
   },
@@ -19,5 +19,9 @@
   },
   "scripts": {
     "start": "node server.js"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0",
+    "express-hbs": "^1.0.4"
   }
 }

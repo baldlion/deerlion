@@ -13,25 +13,29 @@
   <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
   <link rel="stylesheet" type="text/css" href="{{asset "css/styles.css"}}" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display:400,700" rel="stylesheet" />
 
   {{ghost_head}}
 </head>
-<body class="{{body_class}} nav-closed">
+<body class="{{body_class}}">
 
-<div class="site-wrapper">
+<div class="layout">
 
-  {{{body}}}
+  <div class="layout__content">
+    {{navigation}}
 
-  <footer class="footer">
-    <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-  </footer>
+    {{{body}}}
+
+    <footer class="layout__footer">
+      <section>
+        <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}
+      </section>
+    </footer>
+  </div>
 
 </div>
 
 {{ghost_foot}}
-
-<script type="text/javascript" src="{{asset "js/scripts.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/bundle.js"}}"></script>
 
 </body>
 </html>

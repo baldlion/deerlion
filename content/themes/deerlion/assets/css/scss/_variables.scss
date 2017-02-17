@@ -1,0 +1,13 @@
+$gray: rgb(127, 126, 130);
+$gray-dark: darken($gray, 18%);
+$gray-darker: darken($gray, 36%);
+$gray-light: lighten($gray, 18%);
+$gray-lighter: lighten($gray, 46%);
+
+$body-bg-color: $gray-lighter;
+
+$font-family-serif: 'Butler', serif;
+$font-family-sans-serif: 'Lato', sans-serif;
+
+$layout-bg-color: white;
+$layout-max-width: 1525px;

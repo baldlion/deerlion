@@ -7,3 +7,4 @@ content/data/*
 
 .idea/*
 .DS_Store
+.env

@@ -1,0 +1,30 @@
+.layout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: $layout-max-width;
+  margin: 0 auto;
+  background-color: $layout-bg-color;
+
+  &__content {
+    width: 100%;
+    max-width: 1170px;
+    margin: 2rem 0;
+
+    @media (min-width: 530px) {
+      margin: 2rem;
+    }
+  }
+
+  &__header {
+
+  }
+
+  &__main {
+    margin: 6rem 0;
+  }
+
+  &__footer {
+    display: none;
+  }
+}

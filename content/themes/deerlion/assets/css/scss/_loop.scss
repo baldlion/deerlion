@@ -1,0 +1,115 @@
+.loop {
+
+  &__posts {
+
+  }
+
+  &__post {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    & + & {
+      margin-top: 4rem;
+    }
+
+    @media (min-width: 968px) {
+      flex-direction: row;
+    }
+
+    &--cover {
+      display: block;
+      flex: 0 0 100%;
+      background-size: cover;
+      background-position: center bottom;
+
+      @media (min-width: 968px) {
+        flex: 0 0 700px;
+        height: 0;
+        padding-bottom: 700px;
+      }
+    }
+
+    &--body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 3rem;
+    }
+
+    &--header {
+      position: relative;
+      padding-bottom: 2rem;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80px;
+        height: 1px;
+        background-color: $gray-darker;
+      }
+    }
+
+    &--title {
+
+      > a {
+        font-size: 2rem;
+        font-family: $font-family-serif;
+        color: black;
+      }
+    }
+
+    &--excerpt {
+      position: relative;
+      margin: 2rem 0;
+      padding-bottom: 2rem;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80px;
+        height: 1px;
+        background-color: $gray-darker;
+      }
+    }
+
+    &--meta {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding-top: 2rem;
+      color: $gray;
+      font-size: 0.8rem;
+    }
+
+    &--date {
+      padding-right: 0.3rem;
+    }
+
+    &--author {
+
+    }
+
+    &--tags {
+      flex: 0 0 100%;
+      margin-top: 0.4rem;
+
+      > label {
+
+      }
+
+      > a {
+        color: $gray;
+      }
+    }
+  }
+
+  &__pagination {
+    margin: 4rem 0;
+    text-align: center;
+  }
+}

@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 0 2rem 0;
+
+  &__brand {
+    margin: 0 0 1rem 0;
+
+    > a {
+
+      > img {
+        width: auto;
+        height: 6rem;
+      }
+    }
+  }
+
+  &.header--shrink {
+    margin-top: 1rem;
+
+    .header__brand {
+
+      img {
+        height: 3rem;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,18 @@
+.blognav {
+
+  &__list {
+    display: flex;
+    font-family: $font-family-sans-serif;
+
+    &-item {
+
+      > a {
+        display: block;
+        padding: 1rem;
+        color: black;
+        font-size: 1.2rem;
+        text-transform: lowercase;
+      }
+    }
+  }
+}

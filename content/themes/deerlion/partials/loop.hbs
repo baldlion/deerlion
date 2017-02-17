@@ -1,87 +1,11 @@
-<div class="loop">
+<section class="loop">
 
-  <div class="loop__background"></div>
+  <div class="loop__posts" data-loop-posts>
 
-  <div class="loop__posts" data-posts-slider>
-    {{#foreach posts}}
-      <article class="{{post_class}} loop__post">
-        <div class="loop__post-cover" style="background-image: url({{image}})"></div>
-
-        <div class="loop__post-body">
-          <div class="loop__post-header">
-            <ul class="loop__post-tags">
-              {{#foreach tags}}
-                <li class="loop__post-tag">
-                  {{name}}
-                </li>
-              {{/foreach}}
-            </ul>
-
-            <h2 class="loop__post-title">
-              <a href="{{url}}">
-                {{title}}
-              </a>
-            </h2>
-
-            <div class="loop__post-meta">
-              <time class="loop__post-date" datetime="{{date format="YYYY-MM-DD"}}">
-                {{date format="MMMM Do, YYYY"}}
-              </time>
-              <em>by</em>
-              <span class="loop__post-author">
-                {{author.name}}
-              </span>
-            </div>
-          </div>
-
-          <p class="loop__post-excerpt">{{excerpt words="40"}}</p>
-
-          <a class="btn" href="{{url}}">Read More &raquo;</a>
-        </div>
-      </article>
-
-
-      <!--
-        <article class="{{post_class}} loop__post">
-          <div class="loop__post-inner">
-            <img class="loop__post-thumb" src={{image}} />
-            <div class="loop__post-body">
-              <header class="loop__post-header">
-                <ul class="loop__post-tags">
-                  {{#foreach tags}}
-                    <li class="loop__post-tag">
-                      {{name}}
-                    </li>
-                  {{/foreach}}
-                </ul>
-
-                <h2 class="loop__post-title">
-                  <a href="{{url}}">
-                    {{title}}
-                  </a>
-                </h2>
-
-                <div class="loop__post-meta">
-                  <time class="loop__post-date" datetime="{{date format="YYYY-MM-DD"}}">
-                    {{date format="MMMM Do, YYYY"}}
-                  </time>
-                  <em>by</em>
-                  <span class="loop__post-author">
-                    {{author.name}}
-                  </span>
-                </div>
-              </header>
-
-              <section class="loop__post-body">
-                <p>{{excerpt words="18"}}</p>
-
-                <a class="btn" href="{{url}}">Read More &raquo;</a>
-              </section>
-            </div>
-          </div>
-        </article>
-        -->
-    {{/foreach}}
   </div>
 
-</div>
+  <div class="loop__pagination">
+    <a href="/page/2" class="btn btn--primary btn--large" data-load-more>Load More</a>
+  </div>
+
+</section>
